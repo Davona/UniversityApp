@@ -7,7 +7,16 @@ using UniversityApp.Models;
 
 namespace UniversityApp
 {
-    public class UniversityService
+
+    interface IPrint 
+    {
+        void ShowSchedule();
+
+
+    }
+
+
+    public class UniversityService:IPrint
     {
         public void Show(List<StudentModel> _students)
         {
@@ -39,6 +48,15 @@ namespace UniversityApp
                 }
             }
         }
+
+        public void ShowSchedule()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
         public List<TeacherModel> Swap(List<StudentModel> students, List<TeacherModel> teachers)
         {
             int count = 0;

@@ -15,10 +15,10 @@ namespace UniversityApp.Models
             _age = age;
             _students = students;
         }
-        public int _id;
-        public string _name;
-        public int _age;
-        public List<StudentModel> _students;
+        public int _id { get; set; }
+        public string _name { get; set; }
+        public int _age { get; set; }
+        public List<StudentModel> _students { get; set; }
     }
     public class StudentModel
     {
@@ -29,10 +29,10 @@ namespace UniversityApp.Models
             _age = age;
             _faculty = faculty;
         }
-        public int _id;
-        public string _name;
-        public int _age;
-        public string _faculty;
+        public int _id { get; set; }
+        public string _name { get; set; }
+        public int _age { get; set; }
+        public string _faculty { get; set; }
         public TeacherModel _teacher;
     }
 }
